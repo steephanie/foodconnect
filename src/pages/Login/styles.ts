@@ -1,27 +1,24 @@
-import { KeyboardAvoidingView, SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import styled, { css } from 'styled-components/native';
-
-
+import { SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import styled from 'styled-components/native';
 
 export const Container = styled(SafeAreaView)`
     display: flex;
     flex: 1;
     background-color: #41245C;
-    /* justify-content: space-between; */
     align-Items: center;
+    justify-content: space-between;
 `;
 
 export const Title = styled(Text)`
     color: #FFF;
     font-size: 20px;
     margin-top: 98px;
-    margin-bottom: 103px;
+    margin-bottom: 90px;
 `;
 
 export const InputContainer = styled(View)`
-    width: 80%;
-    margin-bottom: 196px;
-    
+    width: 80%;  
+    margin-bottom: 30%;
 `;
 
 export const Input = styled(TextInput)`
@@ -66,19 +63,19 @@ export const TitleAccess = styled(Text)`
     margin-bottom: 50px;
 `;
 
+export const TitleTouchble = styled(Text)`
+    text-align: center;
+    top: 3.5px;
+    left: 3px;
+    color: #FFF;
+    font-size: 13px;
+`;
+
 export const ErrorText = styled(Text)`
     color: red;
     margin-bottom: 10px;
 `;
 
 export const Separator = styled(View)`
-margin-top: 20px;
+    margin-top: 20px;
 `;
-
-
-// export const Title = styled.Text`
-//     ${({theme}) => css`
-//         font-sizet: 14px;
-//         color: ${theme.colors.text_white};
-//     `}
-// `;
