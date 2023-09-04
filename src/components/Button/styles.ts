@@ -7,7 +7,6 @@ import { colors } from '../../theme/colors';
 
 export const Button = styled(TouchableOpacity)`
     padding: 18px;
-    align-items: center;
     border-radius: ${sizes.RADIUS_SMALL};
     border: 2px solid;
 `;

@@ -1,23 +1,25 @@
 import React from 'react'
 import { View } from 'react-native'
 import * as Styles from './styles';
-import { ButtonsProps } from './types';
+import { ButtonProps } from './types';
 
 
-export function Buttons({
+export function Button({
     title,
     onClick,
     color,
     colorBorder,
-}: ButtonsProps) {
-    const buttonColor = {
+    textStyle,
+}: ButtonProps) {
+    const buttonStyles = {
         backgroundColor: color,
         borderColor: colorBorder,
+        alignItems: textStyle,
     };
 
     return (
         <View>
-            <Styles.Button onPress={onClick} style={buttonColor}>
+            <Styles.Button onPress={onClick} style={buttonStyles}>
                 <Styles.ButtonText>{title}</Styles.ButtonText>
             </Styles.Button>
         </View>
