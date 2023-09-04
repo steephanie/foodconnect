@@ -1,16 +1,16 @@
 import React, { ReactNode } from 'react'
 import { ScrollView, StatusBar, StyleSheet, View } from 'react-native';
 
-interface BoxComponentProps {
+interface BoxProps {
     children: ReactNode;
     style?: any;
 }
 
-function BoxComponent({ children, style }: BoxComponentProps) {
+function Box({ children, style }: BoxProps) {
     return (
         <ScrollView>
             <View style={[styles.box, style]}>
-                <StatusBar barStyle="default" hidden={false} />
+                <StatusBar barStyle="dark-content" hidden={false} />
                 {children}
             </View>
         </ScrollView>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default BoxComponent;
+export default Box;
