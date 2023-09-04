@@ -1,10 +1,11 @@
 import React from 'react'
 import { HomeProps } from './types';
 import { Header } from '../../components/Header';
-import * as css from './styles';
+import * as S from './styles';
 import { Text } from 'react-native';
-import BoxComponent from '../../components/Box';
 import { useNavigation } from '@react-navigation/native';
+import Box from '../../components/Box';
+import { Card } from '../../components/Card';
 
 export const Home = ({
     title
@@ -15,13 +16,16 @@ export const Home = ({
         navigation.goBack();
     };
     return (
-        <BoxComponent>
-            <Header title='' onPress={handleGoBack} />
-            <css.Container>
-                <Text>
-                    HOME
+        <S.Container>
+            <Box>
+                <Header title='' onPress={handleGoBack} />
+                <Text style={{ marginTop: 30, marginBottom: 30, textAlign: 'left', fontSize: 16, color: '#41245C', fontWeight: '500', width: 280 }}>
+                    Ola, NOME ;)
+                    {'\n\n'}
+                    Veja os estabelecimentos mais populares nas proximidades
                 </Text>
-            </css.Container>
-        </BoxComponent>
+                {/* <Card title='Nome empresa' address='endereco' availability='disponibilidade' location='localizacao' /> */}
+            </Box>
+        </S.Container>
     )
 };

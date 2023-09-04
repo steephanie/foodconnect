@@ -5,6 +5,6 @@ import { colors } from '../../theme/colors';
 export const Container = styled(View)`
     display: flex;
     flex: 1;
-    background-color: ${colors.BACKGROUND};
+    background-color: ${colors.WHITE};
     
 `;
