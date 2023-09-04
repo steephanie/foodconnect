@@ -1,10 +1,11 @@
-import { Text, TouchableOpacity, ViewProps } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../services/firebase';
-import * as Styles from './styles';
+import * as S from './styles';
 import { LoginProps } from './type';
+import { Button } from '../../components/Button';
 
 export const Login = ({
   title
@@ -41,52 +42,50 @@ export const Login = ({
   };
 
   return (
-    <Styles.Container>
-      <Styles.Title>
+    <S.Container>
+      <S.Title>
         Trabalho proximo de você, facil e rapido!
         {'\n\n'}
         Bora? ;)
-      </Styles.Title>
+      </S.Title>
 
-      <Styles.InputContainer>
-        <Styles.Input
+      <S.InputContainer>
+        <S.Input
           placeholderTextColor={'#FFFFFF'}
           placeholder='Email'
           value={email}
           onChangeText={(text: React.SetStateAction<string>) => setEmail(text)}
         />
-        <Styles.Separator />
-        <Styles.Input
+        <S.Separator />
+        <S.Input
           placeholderTextColor={'#FFFFFF'}
           placeholder='Senha'
           value={password}
           onChangeText={(text: React.SetStateAction<string>) => setPassword(text)}
           secureTextEntry
         />
-        {errorMessage !== '' && <Styles.ErrorText>{errorMessage}</Styles.ErrorText>}
-        <Styles.Box>
+        {errorMessage !== '' && <S.ErrorText>{errorMessage}</S.ErrorText>}
+        <S.Box>
           <TouchableOpacity onPress={handlePassword}>
-            <Styles.TitlePassword>
+            <S.TitlePassword>
               Esqueci minha senha
-            </Styles.TitlePassword>
+            </S.TitlePassword>
           </TouchableOpacity>
-        </Styles.Box>
-      </Styles.InputContainer>
+        </S.Box>
+      </S.InputContainer>
 
-      <Styles.ButtonContainer>
-        <Styles.Button onPress={handleSignIn} >
-          <Styles.ButtonText>Entrar</Styles.ButtonText>
-        </Styles.Button>
-
-        <Styles.TitleAccess>
+      <S.ButtonContainer>
+        <Button title='Entrar' color='transparent' colorBorder='white' textStyle='center' onClick={handleSignIn} />
+        <S.Separator />
+        <S.TitleAccess>
           Primeiro acesso?
           <TouchableOpacity onPress={handleLogin}>
-            <Styles.TitleTouchble>
+            <S.TitleTouchble>
               Clique aqui!
-            </Styles.TitleTouchble>
+            </S.TitleTouchble>
           </TouchableOpacity>
-        </Styles.TitleAccess>
-      </Styles.ButtonContainer>
-    </Styles.Container>
+        </S.TitleAccess>
+      </S.ButtonContainer>
+    </S.Container>
   );
 };

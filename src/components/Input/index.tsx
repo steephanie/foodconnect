@@ -1,5 +1,5 @@
 import React from 'react'
-import { KeyboardAvoidingView, TextInput, StyleSheet } from 'react-native'
+import { TextInput, StyleSheet } from 'react-native'
 import { InputProps } from './types';
 
 
@@ -11,7 +11,6 @@ export function Input({
 }: InputProps) {
 
     return (
-        <KeyboardAvoidingView behavior="padding">
             <TextInput
                 style={styles.input}
                 placeholder={placeholder}
@@ -19,8 +18,6 @@ export function Input({
                 value={value}
                 keyboardType={keyboardType}
             />
-        </KeyboardAvoidingView>
-
     )
 }
 

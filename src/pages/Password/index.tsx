@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { PasswordProps } from './types';
-import { Alert, Text, TextInput, View } from 'react-native';
+import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { auth, sendPasswordResetEmail } from '../../services/firebase';
-import BoxComponent from '../../components/Box';
+import Box from '../../components/Box';
 import { Header } from '../../components/Header';
-import { Buttons } from '../../components/Button';
+import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+import * as S from './styles';
 
 export const Password = ({
     title
@@ -23,7 +24,6 @@ export const Password = ({
             Alert.alert('Erro', 'Por favor, insira seu e-mail.');
             return;
         }
-
         sendPasswordResetEmail(auth, email)
             .then(() => {
                 Alert.alert('E-mail Enviado', 'Um e-mail de redefinição de senha foi enviado para o seu endereço de e-mail.');
@@ -34,23 +34,23 @@ export const Password = ({
     };
 
     return (
-        <BoxComponent>
+        <Box>
             <Header title='Voltar' icon onPress={handleGoBack} />
-                <Text style={{ fontSize: 36, textAlign: 'center', marginTop: 10 }}>
-                    Esqueci minha senha
-                </Text>
-                <Text style={{ fontSize: 20, marginTop: 23, marginBottom: 40 }}>
-                    Confirme seu CPF ou E-MAIL para que possamos te encaminhar o link para uma nova senha.
-                </Text>
-                <Input
-                    placeholder="Seu e-mail"
-                    onChangeText={(text) => setEmail(text)}
-                    value={email}
-                />
-                <BoxComponent>
-                    <Buttons title="Redefinir Senha" onClick={handleResetPassword} color='#41245C' />
-                </BoxComponent>
-        </BoxComponent>
+            <S.Title>
+                Esqueci minha senha
+            </S.Title>
+            <S.Description>
+                Confirme seu E-MAIL para que possamos te encaminhar o link para uma nova senha.
+            </S.Description>
+            <Input
+                placeholder="Seu e-mail"
+                onChangeText={(text) => setEmail(text)}
+                value={email}
+            />
+            <Box>
+                <Button title="Redefinir Senha" onClick={handleResetPassword} color='#41245C' textStyle='center' />
+            </Box>
+        </Box>
     );
 };
 
