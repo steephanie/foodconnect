@@ -3,12 +3,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Login } from '../Login';
-import { Home } from '../Home';
-import { Term } from '../Term';
-import { Account } from '../Account';
-import { Search } from '../Search';
 import { Register } from '../Register';
 import { Password } from '../Password';
+import { Term } from '../Term';
+import { Home } from '../TabHome';
+import { Account } from '../TabAccount';
+import { Search } from '../TabSearch';
 
 
 const Stack = createNativeStackNavigator();
@@ -53,8 +53,8 @@ const StackNavication = () => {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Home" component={HomeTabs} />
       <Stack.Screen name="Register" component={Register} />
-      <Stack.Screen name="Term" component={Term} />
       <Stack.Screen name="Password" component={Password} />
+      <Stack.Screen name="Term" component={Term} />
     </Stack.Navigator>
   );
 };
