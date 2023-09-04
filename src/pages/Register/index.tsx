@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import { KeyboardAvoidingView, TouchableOpacity } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import Checkbox from 'expo-checkbox';
-import * as Styles from './styles';
+import * as S from './styles';
 import { Input } from '../../components/Input';
 import { RegisterProps } from './types';
-import { Buttons } from '../../components/Button';
+import { Button } from '../../components/Button';
 import Box from '../../components/Box';
 import { useNavigation } from '@react-navigation/native';
 import { Header } from '../../components/Header';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 
 export const Register = ({
@@ -36,44 +37,44 @@ export const Register = ({
             navigation.navigate('Home');
         }
     };
-    
+
     const handleGoBack = () => {
         navigation.goBack();
     };
 
     return (
-        <Box>
-            <Header title='Voltar' onPress={handleGoBack}/>
-            <Styles.Container>
-                <Styles.Title>Que legal! Para começar vamos realizar o seu cadastro.</Styles.Title>
-                <KeyboardAvoidingView behavior="padding">
+        <KeyboardAwareScrollView scrollEnabled={true}>
+            <Box>
+                <Header title='Voltar' onPress={handleGoBack} />
+                <S.Container>
+                    <S.Title>Que legal! Para começar vamos realizar o seu cadastro.</S.Title>
                     <Input placeholder='NOME COMPLETO' keyboardType='default' onChangeText={(text) => setNome(text)} />
                     <Input placeholder='CPF' keyboardType='numeric' onChangeText={(text) => setCpf(text)} />
                     <Input placeholder='DATA DE NASCIMENTO' keyboardType='numeric' onChangeText={(text) => setDataNascimento(text)} />
                     <Input placeholder='E-MAIL' keyboardType='email-address' onChangeText={(text) => setEmail(text)} />
                     <Input placeholder='CONTATO' keyboardType='phone-pad' onChangeText={(text) => setContato(text)} />
                     <Input placeholder='ENDEREÇO' keyboardType='default' onChangeText={(text) => setEndereco(text)} />
-                </KeyboardAvoidingView>
 
-                <Box style={{ alignContent: 'center', flexDirection: 'row', left: 4 }}>
-                    <Checkbox
-                        value={isChecked}
-                        onValueChange={setChecked}
-                        color={isChecked ? '#41245C' : undefined}
-                    />
-                    <Styles.TitleTerm>
-                        Li e concordo com os
-                        <TouchableOpacity onPress={handleTerm}>
-                            <Styles.TitleTermBold>
-                                Termos de uso.
-                            </Styles.TitleTermBold>
-                        </TouchableOpacity>
-                    </Styles.TitleTerm>
-                </Box>
-                <Box style={{ marginTop: 0 }}>
-                    <Buttons title='Cadastrar' onClick={handleCadastro} color='#41245C' colorBorder="#41245C" />
-                </Box>
-            </Styles.Container>
-        </Box>
+                    <Box style={{ alignContent: 'center', flexDirection: 'row', left: 4 }}>
+                        <Checkbox
+                            value={isChecked}
+                            onValueChange={setChecked}
+                            color={isChecked ? '#41245C' : undefined}
+                        />
+                        <S.TitleTerm>
+                            Li e concordo com os
+                            <TouchableOpacity onPress={handleTerm}>
+                                <S.TitleTermBold>
+                                    Termos de uso.
+                                </S.TitleTermBold>
+                            </TouchableOpacity>
+                        </S.TitleTerm>
+                    </Box>
+                    <Box style={{ marginTop: 0 }}>
+                        <Button title='Cadastrar' onClick={handleCadastro} color='#41245C' colorBorder="#41245C" textStyle='center' />
+                    </Box>
+                </S.Container>
+            </Box>
+        </KeyboardAwareScrollView>
     )
 };
