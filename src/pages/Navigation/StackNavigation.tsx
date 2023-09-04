@@ -19,21 +19,48 @@ const HomeTabs = () => {
     <Tab.Navigator>
       <Tab.Screen name="Inicio" component={Home} options={{
         headerShown: false,
-        tabBarIcon: () => (
-          <Ionicons name="home" size={20} color="#41245C" />
-        ),
+        tabBarIcon: ({ focused }) => {
+          const iconColor = focused ? "#41245C" : "#555"
+          return (
+            <Ionicons name="home" size={20} color={iconColor} />
+          )
+        },
+        tabBarLabelStyle: {
+          fontSize: 15,
+          fontWeight: '500',
+        },
+        tabBarActiveTintColor: "#41245C",
+        tabBarInactiveTintColor: "#555",
       }} />
       <Tab.Screen name="Busca" component={Search} options={{
         headerShown: false,
-        tabBarIcon: () => (
-          <Ionicons name="search" size={20} color="#41245C" />
-        ),
+        tabBarIcon: ({ focused }) => {
+          const iconColor = focused ? "#41245C" : "#555"
+          return (
+            <Ionicons name="search" size={20} color={iconColor} />
+          )
+        },
+        tabBarLabelStyle: {
+          fontSize: 15,
+          fontWeight: '500',
+        },
+        tabBarActiveTintColor: "#41245C",
+        tabBarInactiveTintColor: "#555",
       }} />
       <Tab.Screen name="Conta" component={Account} options={{
         headerShown: false,
-        tabBarIcon: () => (
-          <Ionicons name="person" size={20} color="#41245C" />
-        ),
+        tabBarIcon: ({ focused }) => {
+          const iconColor = focused ? "#41245C" : "#555"
+          return (
+            <Ionicons name="person" size={20} color={iconColor} />
+          )
+        },
+        tabBarLabelStyle: {
+          fontSize: 15,
+          fontWeight: '500',
+        },
+        tabBarActiveTintColor: "#41245C",
+        tabBarInactiveTintColor: "#555",
       }} />
     </Tab.Navigator>
   );
