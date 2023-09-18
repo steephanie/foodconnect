@@ -1,6 +1,21 @@
 {
   "extends": "expo/tsconfig.base",
+  "moduleResolution": "node",
+  "target": "esnext",
+  "jsx": "react-native",
+  "module": "esnext",
+  "types": [
+    "react",
+    "react-native",
+    "react-navigation",
+    "react-navigation-stack",
+  ],
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+  },
+  "paths": {
+    "@components/*": [
+      "./src/components/*"
+    ]
+  },
 }
