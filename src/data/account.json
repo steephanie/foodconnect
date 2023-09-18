@@ -1,0 +1,11 @@
+[
+    {
+        "id": 1,
+        "nome": "Food Connect",
+        "cpf": "000.000.000-00",
+        "data": "01/01/1995",
+        "mail": "foodconnectsac@gmail.com",
+        "phone": "(11) 99999-9999",
+        "andress": "Avenida food connect, 99 - Connect"
+    }
+] 

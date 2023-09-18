@@ -1,0 +1,48 @@
+[
+    {
+        "id": "000001",
+        "nome": "Outback Steakhouse",
+        "img_url": "https://www3.santoandre.sp.gov.br/turismosantoandre/wp-content/uploads/2022/03/Logo-outback.png",
+        "km_localizacao": 2.5,
+        "localizacao": "Av. Moaci, 187 - Moema, São Paulo - SP, 04083-000",
+        "informacoes_vaga": "Garçom",
+        "descricao_vaga": "O Outback Steakhouse tem 152 restaurantes no Brasil, presentes em 61 cidades e 20 estados mais o Distrito Federal. Globalmente, está em 23 países. Fundado em 1997, o primeiro restaurante abriu no Rio de Janeiro. Com cortes de carne especiais e aperitivos como a Bloomin' Onion, conquistou os brasileiros pela qualidade da culinária, ambiente descontraído e referências à cultura australiana. A marca oferece uma experiência única, chamada #MomentoOutback, e pertence ao grupo Bloomin’ Brands junto com Abbraccio e Aussie Grill.",
+        "requisitos_01": "Experiência prévia, boa comunicação",
+        "requisitos_02": "Habilidade de Atendimento ao Clienteo",
+        "requisitos_03": "Eficiência e Organização",
+        "requisitos_04": "Trabalho em Equipe",
+        "requisitos_05": "Adaptação a Situações Diversas",
+        "requisitos_06": "Resistência Física"
+    },
+    {
+        "id": "000002",
+        "nome": "Bar do Juarez",
+        "img_url": "https://static.wixstatic.com/media/7201a9_394287cd09314c90a77b61beeb484679~mv2_d_2466_2176_s_2.png",
+        "km_localizacao": 5.0,
+        "localizacao": "Av. Jurema, 324 - Moema, Indianópolis - SP, 04079-001",
+        "informacoes_vaga": "Balconista",
+        "descricao_vaga": "Juarez Alves, originário da Bahia, fundou o famoso Bar do Juarez em São Paulo após uma jornada de 20 anos. Chegando a São Paulo aos 12 anos, sonhava com um negócio próprio e trabalhou como balconista, chapeiro e garçom para economizar. Com cinco unidades na cidade, o bar se tornou renomado. Em 1999, Juarez inaugurou a primeira unidade do Bar do Juarez em Moema, após a venda de seu antigo restaurante.",
+        "requisitos_01": "Experiência prévia, boa comunicação",
+        "requisitos_02": "Atendimento ao Cliente",
+        "requisitos_03": "Organização",
+        "requisitos_04": "Agilidade",
+        "requisitos_05": "Resolução de Problemas",
+        "requisitos_06": "Atenção aos Detalhes"
+    },
+    {
+        "id": "000003",
+        "nome": "Bar do Urso",
+        "img_url": "https://www.cervejariacolorado.com.br/sites/g/files/wnfebl5691/files/2022-03/link%20colorado.png",
+        "km_localizacao": 1.8,
+        "localizacao": "Alameda dos Maracatins, 715 - Moema, São Paulo - SP, 04089-011",
+        "quantidade_vagas": 3,
+        "informacoes_vaga": "Barman",
+        "descricao_vaga": "A Cervejaria Colorado é uma das primeiras cervejarias artesanais do Brasil, fundada por Marcelo Carneiro, em 1996. Natural de Ribeirão Preto, nós apoiamos fortemente os micro-produtores locais, que fornecem insumos para os rótulos criativos. Desde sua fundação, a Colorado tem valorizado ingredientes tipicamente brasileiros em suas cervejas, provando que biodiversidade também gera biodeliciosidade.",
+        "requisitos_01": "Experiência prévia, boa comunicação",
+        "requisitos_02": "Experiência em Bartending",
+        "requisitos_03": "Conhecimento de Bebidas",
+        "requisitos_04": "Criatividade",
+        "requisitos_05": "Agilidade",
+        "requisitos_06": "Trabalho em Equipe"
+    }
+]
