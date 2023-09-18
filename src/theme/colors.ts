@@ -8,4 +8,5 @@ export const colors = {
     RED100: '#FF4F2C',
     GRAY50: '#E4E4E4',
     GRAY100: '#9DA3AA',
+    BLUE100: '#0000FF',
   }
