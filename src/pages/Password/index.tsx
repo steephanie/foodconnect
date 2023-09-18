@@ -9,9 +9,7 @@ import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import * as S from './styles';
 
-export const Password = ({
-    title
-}: PasswordProps) => {
+export const Password = ({}: PasswordProps) => {
     const navigation = useNavigation();
 
     const handleGoBack = () => {

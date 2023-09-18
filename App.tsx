@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import StackNavigation from './src/pages/Navigation/StackNavigation'
+import StackNavigation from './src/routes/Navigation/StackNavigation'
 
 const App = () => {
   return (

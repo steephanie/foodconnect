@@ -1,17 +1,19 @@
 import { SafeAreaView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import styled from 'styled-components/native';
+import { sizes } from '../../theme/sizes';
+import { colors } from '../../theme/colors';
 
 export const Container = styled(SafeAreaView)`
     display: flex;
     flex: 1;
-    background-color: #41245C;
+    background-color: ${colors.PURPLE100};
     align-Items: center;
     justify-content: space-between;
 `;
 
 export const Title = styled(Text)`
-    color: #FFF;
-    font-size: 20px;
+    color: ${colors.WHITE};
+    font-size: ${sizes.TITLE_MEDIUM};
     margin-top: 98px;
     margin-bottom: 90px;
 `;
@@ -25,7 +27,7 @@ export const Input = styled(TextInput)`
     border-width: 1px;
     border-color: gray;
     padding: 10px;
-    color: #FFFFFF;
+    color: ${colors.WHITE};
 `;
 
 export const Box = styled(View)`
@@ -33,8 +35,8 @@ export const Box = styled(View)`
 `;
 
 export const TitlePassword = styled(Text)`
-    color: #FFF;
-    font-size: 13px;
+    color: ${colors.WHITE};
+    font-size: ${sizes.LABEL_MEDIUM};
     text-align: right;
     margin-top: 20px;
 `;
@@ -44,7 +46,7 @@ export const ButtonContainer = styled(View)`
 `;
 
 export const Button = styled(TouchableOpacity)`
-    background-color: blue;
+    background-color: ${colors.BLUE100};
     padding: 10px;
     align-items: center;
     border-radius: 5px;
@@ -52,13 +54,13 @@ export const Button = styled(TouchableOpacity)`
 `;
 
 export const ButtonText = styled(Text)`
-    color: #FFF;
+    color: ${colors.WHITE};
     font-weight: bold;
 `;
 
 export const TitleAccess = styled(Text)`
-    color: #FFF;
-    font-size: 13px;
+    color: ${colors.WHITE};
+    font-size: ${sizes.LABEL_MEDIUM};
     text-align: center;
     margin-bottom: 50px;
 `;
@@ -67,8 +69,8 @@ export const TitleTouchble = styled(Text)`
     text-align: center;
     top: 3.5px;
     left: 3px;
-    color: #FFF;
-    font-size: 13px;
+    color: ${colors.WHITE};
+    font-size: ${sizes.LABEL_MEDIUM};
 `;
 
 export const ErrorText = styled(Text)`
@@ -77,5 +79,5 @@ export const ErrorText = styled(Text)`
 `;
 
 export const Separator = styled(View)`
-    margin-top: 20px;
+    margin-top: 20px; 
 `;

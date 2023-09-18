@@ -34,7 +34,7 @@ export const Register = ({
         } else {
             // Navegacao para a Home.
             alert('Cadastro realizado com sucesso!');
-            navigation.navigate('Home');
+            navigation.navigate('SucessRegister');
         }
     };
 

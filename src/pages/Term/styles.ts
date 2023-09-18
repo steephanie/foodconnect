@@ -1,6 +1,7 @@
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import { sizes } from '../../theme/sizes';
+import { colors } from '../../theme/colors';
 
 export const Container = styled(ScrollView)`
     display: flex;
@@ -36,5 +37,5 @@ export const I = styled(Text)`
 export const Mail = styled(Text)`
     font-style: italic;
     text-decoration: underline;
-    color: #0000FF;
+    color: ${colors.BLUE100};
 `;

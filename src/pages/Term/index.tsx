@@ -92,7 +92,7 @@ export const Term = ({ }: TermProps) => {
                     7. Contato
                 </S.LabelLarge>
                 <S.LabelMedium>
-                    7.1. Se você tiver alguma dúvida ou preocupação sobre estes Termos de Uso, entre em contato conosco em <S.Mail onPress={() => { Linking.openURL('https://reactnative.dev') }}>foodconnect@gmail.com</S.Mail>.
+                    7.1. Se você tiver alguma dúvida ou preocupação sobre estes Termos de Uso, entre em contato conosco em <S.Mail onPress={() => { Linking.openURL('https://reactnative.dev') }}>foodconnectsac@gmail.com</S.Mail>.
                     {'\n\n'}
                     Ao usar o Aplicativo FoodConnect, você concorda em cumprir estes Termos de Uso. O FoodConnect se esforça para proporcionar uma experiência positiva e segura para todos os usuários.
                 </S.LabelMedium>
