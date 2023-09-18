@@ -1,10 +1,8 @@
 import React from 'react'
 import { Image, View } from 'react-native'
-import * as Styles from './styles';
+import * as S from './styles';
 import { CardProps } from './types';
-import Box from '../Box';
-import img from '../../../assets/favicon.png'
-
+import icon from '../../../src/assets/img/pin.png';
 
 export function Card({
     title,
@@ -15,6 +13,7 @@ export function Card({
     color,
     colorBorder,
     textStyle,
+    img,
 }: CardProps) {
     const buttonStyles = {
         backgroundColor: color,
@@ -23,18 +22,23 @@ export function Card({
     };
 
     return (
-        <Styles.Button onPress={onClick} style={buttonStyles}>
-            <View style={{ flexDirection: 'row' }}>
-                <Box style={{ marginTop: 0, backgroundColor: 'pink' }}>
-                    <Image source={img} />
-                </Box>
-                <Box style={{ marginTop: 0, backgroundColor: 'red' }}>
-                    <Styles.Title>{title}</Styles.Title>
-                    <Styles.Location>{location}</Styles.Location>
-                    <Styles.Address>{address}</Styles.Address>
-                    <Styles.Availability>{availability}</Styles.Availability>
-                </Box>
+        <S.Button onPress={onClick} style={buttonStyles}>
+            <View style={{ flexDirection: 'row', }}>
+                <S.Img source={img} />
+
+                <S.BoxTitles>
+                    <S.Title>{title}</S.Title>
+                    <S.Location>{location}</S.Location>
+
+                    <S.SeparatorTitle>
+                        <View style={{ flexDirection: 'row' }}>
+                            <S.Icon source={icon} />
+                            <S.Address>{address}</S.Address>
+                        </View>
+                        <S.Availability>{availability}</S.Availability>
+                    </S.SeparatorTitle>
+                </S.BoxTitles>
             </View>
-        </Styles.Button>
+        </S.Button>
     )
 };
