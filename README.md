@@ -20,6 +20,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Expo](https://expo.dev/)
 - [Axios](https://axios-http.com/ptbr/docs/intro)
 - [Styled Components](https://styled-components.com/)
+- [Firebase](https://docs.expo.dev/guides/using-firebase/)
 
 -------------
 
