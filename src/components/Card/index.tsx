@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, View } from 'react-native'
+import { View } from 'react-native'
 import * as S from './styles';
 import { CardProps } from './types';
 import icon from '../../../src/assets/img/pin.png';

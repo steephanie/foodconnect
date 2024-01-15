@@ -23,6 +23,7 @@
     "@types/styled-components-react-native": "^5.2.1",
     "all": "^0.0.0",
     "axios": "^1.5.0",
+    "eas-cli": "^5.4.0",
     "expo": "~49.0.7",
     "expo-checkbox": "~2.4.0",
     "expo-linear-gradient": "~12.3.0",

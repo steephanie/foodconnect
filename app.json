@@ -15,12 +15,19 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/logo.png",
         "backgroundColor": "#41245C"
+      },
+      "package": "com.ste_phaniie.foodconnect"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "5c08857e-ae08-4c91-99db-2f2bb85747b2"
       }
     }
   }
